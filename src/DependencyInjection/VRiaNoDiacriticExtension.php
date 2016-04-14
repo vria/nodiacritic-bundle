@@ -1,6 +1,6 @@
 <?php
 
-namespace VRia\Bundle\NoDiacritic\DependencyInjection;
+namespace VRia\Bundle\NoDiacriticBundle\DependencyInjection;
 
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

@@ -1,24 +1,28 @@
 <?php
 
-namespace Knp\Bundle\PaginatorBundle\Twig\Extension;
+namespace VRia\Bundle\NoDiacriticBundle\Twig\Extension;
 
-use Knp\Bundle\PaginatorBundle\Helper\Processor;
-use Knp\Bundle\PaginatorBundle\Pagination\SlidingPagination;
+use Symfony\Component\HttpFoundation\RequestStack;
+use VRia\Utils\NoDiacritic;
 
 class NoDiacriticExtension extends \Twig_Extension
 {
     /**
      * @var RequestStack
      */
-    protected $requestStack = null;
+    protected $requestStack;
 
-    public function __construct(RequestStack $requestStack = null)
+    /**
+     * @param RequestStack $requestStack
+     */
+    public function __construct(RequestStack $requestStack)
     {
-        if (is_object($requestStack)) {
-            $this->requestStack = $requestStack;
-        }
+        $this->requestStack = $requestStack;
     }
 
+    /**
+     * @return array
+     */
     public function getFilters()
     {
         return array(
@@ -26,13 +30,20 @@ class NoDiacriticExtension extends \Twig_Extension
         );
     }
 
+    /**
+     * @param $string
+     * @return string
+     */
+    public function filter($string)
+    {
+        return NoDiacritic::filter($string, $this->requestStack->getCurrentRequest()->getLocale());
+    }
+
+    /**
+     * @return string
+     */
     public function getName()
     {
         return 'vria_nodiacritic';
-    }
-
-    public function filter($string)
-    {
-
     }
 }

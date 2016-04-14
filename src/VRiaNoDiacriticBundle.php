@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the GenemuFormBundle package.
+ * This file is part of the VRiaNoDiacriticBundle package.
  *
  * (c) Vlad Riabchenko <@>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace VRia\Bundle\NoDiacritic;
+namespace VRia\Bundle\NoDiacriticBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
