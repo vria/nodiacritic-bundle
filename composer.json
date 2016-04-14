@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "VRia\\Bundle\\NoDiacritic": "src"
+            "VRia\\Bundle\\NoDiacritic\\": "src/"
         }
     }
 }
