@@ -1,0 +1,6 @@
+services:
+    nodiacritic:
+        class: VRia\Bundle\NoDiacriticBundle\Twig\Extension\NoDiacriticExtension
+        arguments: [@request_stack]
+        tags:
+            - { name: twig.extension }
