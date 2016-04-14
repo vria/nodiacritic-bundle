@@ -1,0 +1,28 @@
+{
+    "name": "vria/nodiacritic-bundle",
+    "type": "symfony-bundle",
+    "description": "The symfony integration for nodiacritic library",
+    "keywords": ["symfony", "string", "filter", "diacritic", "accent"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Riabchenko Vlad",
+            "email": "Riabchenko.Vlad@gmail.com",
+			"homepage": "http://vria.eu"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.2",
+		"vria/nodiacritic": "*",
+        "symfony/framework-bundle": ">=2.3"
+    },
+    "require-dev": {
+		
+    },
+    "autoload": {
+        "psr-4": {
+            "VRia\\Bundle\\NoDiacritic": "src"
+        }
+    }
+}
