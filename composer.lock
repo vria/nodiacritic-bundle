@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "18c7ed200269eed0dc59023b5d1ad0b2",
-    "content-hash": "a4435597083d8cf68c3ee4817e09133a",
+    "hash": "7295d2aad21adf179ca1757254be79d0",
+    "content-hash": "0e3750ea96cd41694d86cdd8d46fc6d5",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -631,12 +631,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "0a4a24f00368f76101e98f9d876bd41bbe88938c"
+                "reference": "c05c38fe0afddfe90edc655b61d617b84ca38d9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/0a4a24f00368f76101e98f9d876bd41bbe88938c",
-                "reference": "0a4a24f00368f76101e98f9d876bd41bbe88938c",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/c05c38fe0afddfe90edc655b61d617b84ca38d9a",
+                "reference": "c05c38fe0afddfe90edc655b61d617b84ca38d9a",
                 "shasum": ""
             },
             "require": {
@@ -682,7 +682,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2016-04-12 18:27:47"
+            "time": "2016-04-14 11:54:39"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -848,12 +848,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/framework-bundle.git",
-                "reference": "e1ba8cc49c8a66176c4cdb7661e07cd7d59eea3a"
+                "reference": "151fe5a1171ba09d96f33157b61a48a85988eeb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/framework-bundle/zipball/e1ba8cc49c8a66176c4cdb7661e07cd7d59eea3a",
-                "reference": "e1ba8cc49c8a66176c4cdb7661e07cd7d59eea3a",
+                "url": "https://api.github.com/repos/symfony/framework-bundle/zipball/151fe5a1171ba09d96f33157b61a48a85988eeb3",
+                "reference": "151fe5a1171ba09d96f33157b61a48a85988eeb3",
                 "shasum": ""
             },
             "require": {
@@ -937,7 +937,7 @@
             ],
             "description": "Symfony FrameworkBundle",
             "homepage": "https://symfony.com",
-            "time": "2016-04-07 15:36:32"
+            "time": "2016-04-14 11:58:12"
         },
         {
             "name": "symfony/http-foundation",
@@ -1669,7 +1669,7 @@
         },
         {
             "name": "vria/nodiacritic",
-            "version": "dev-master",
+            "version": "0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/riabchenkovlad/nodiacritic.git",
