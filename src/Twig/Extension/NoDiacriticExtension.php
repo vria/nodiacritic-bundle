@@ -2,9 +2,13 @@
 
 namespace VRia\Bundle\NoDiacriticBundle\Twig\Extension;
 
+
 use Symfony\Component\HttpFoundation\RequestStack;
 use VRia\Utils\NoDiacritic;
 
+/**
+ * @author Vlad Riabchenko <contact@vria.eu>
+ */
 class NoDiacriticExtension extends \Twig_Extension
 {
     /**

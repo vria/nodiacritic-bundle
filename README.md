@@ -1,6 +1,8 @@
 VRiaNoDiacriticBundle
 =============
 
+[![Build Status](https://travis-ci.org/riabchenkovlad/nodiacritic-bundle.svg?branch=master)](https://travis-ci.org/riabchenkovlad/nodiacritic-bundle)
+
 The symfony integration for [nodiacritic library](https://github.com/riabchenkovlad/nodiacritic)
 
 
