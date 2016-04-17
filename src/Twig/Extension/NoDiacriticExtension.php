@@ -26,7 +26,7 @@ class NoDiacriticExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            new \Twig_SimpleFilter('nodiacritic', array($this, 'filter'))
+            new \Twig_Filter('nodiacritic', array($this, 'filter'))
         );
     }
 
