@@ -9,6 +9,7 @@ class NoDiacriticExtensionTest extends \PHPUnit_Framework_TestCase
 {
     const NO_DIACRITIC = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,./?'\"!@#$%^&*()_-+=абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
     const DIACRITIC = "àâçéèêëîïœôùûÀÂÇÈÉÊËÎÏŒáéíñóúüÁÉÍÑÓÚÜÔÙÛàèìòùÀÈÌÒÙãÃçÇòÒóÓõÕäåæðëöøßþüÿÄÅÆÐËÖØÞÜ";
+    const GERMAN_FILTERED = "aaceeeeiioeouuAACEEEEIIOEaeinouueAEINOUUeOUUaeiouAEIOUaAcCoOoOoOaeaaedeoeossthueyAeAAEDEOeOTHUe";
 
     /**
      * @param string $locale
@@ -65,8 +66,7 @@ class NoDiacriticExtensionTest extends \PHPUnit_Framework_TestCase
     {
         $extension = $this->getExtention('de');
 
-        $this->assertEquals("aaceeeeiioeouuAACEEEEIIOEaeinouueAEINOUUeOUUaeiouAEIOUaAcCoOoOoOaeaaedeoeossthueyAeAAEDEOeOTHUe",
-            $extension->filter(self::DIACRITIC));
+        $this->assertEquals(self::GERMAN_FILTERED, $extension->filter(self::DIACRITIC));
     }
 
     public function testDanishLocale()
@@ -75,5 +75,13 @@ class NoDiacriticExtensionTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals("aaceeeeiioeouuAACEEEEIIOEaeinouuAEINOUUOUUaeiouAEIOUaAcCoOoOoOaaaaedeooesthuyAAaAeDEOOeTHU",
             $extension->filter(self::DIACRITIC));
+    }
+
+    public function testPassedLocaleOverridesDefalutOne()
+    {
+        $extension = $this->getExtention('da');
+
+        $this->assertEquals(self::GERMAN_FILTERED,
+            $extension->filter(self::DIACRITIC, 'de'));
     }
 }

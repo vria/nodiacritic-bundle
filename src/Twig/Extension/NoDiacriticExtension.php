@@ -38,9 +38,9 @@ class NoDiacriticExtension extends \Twig_Extension
      * @param $string
      * @return string
      */
-    public function filter($string)
+    public function filter($string, $locale = null)
     {
-        return NoDiacritic::filter($string, $this->requestStack->getCurrentRequest()->getLocale());
+        return NoDiacritic::filter($string, $locale ? : $this->requestStack->getCurrentRequest()->getLocale());
     }
 
     /**
