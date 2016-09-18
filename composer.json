@@ -13,7 +13,7 @@
     ],
     "support": {
         "email": "contact@vria.eu",
-        "issues": "https://github.com/riabchenkovlad/nodiacritic-bundle/issues"
+        "issues": "https://github.com/vria/nodiacritic-bundle/issues"
     },
     "minimum-stability": "dev",
     "require": {

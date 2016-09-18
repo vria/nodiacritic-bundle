@@ -1,9 +1,9 @@
 VRiaNoDiacriticBundle
 =============
 
-[![Build Status](https://travis-ci.org/riabchenkovlad/nodiacritic-bundle.svg?branch=master)](https://travis-ci.org/riabchenkovlad/nodiacritic-bundle)
+[![Build Status](https://travis-ci.org/vria/nodiacritic-bundle.svg?branch=master)](https://travis-ci.org/vria/nodiacritic-bundle)
 
-The symfony integration for [nodiacritic library](https://github.com/riabchenkovlad/nodiacritic)
+The symfony integration for [nodiacritic library](https://github.com/vria/nodiacritic) - tiny library that removes all diacritical signs from characters.
 
 
 ##Installation
@@ -32,11 +32,25 @@ public function registerBundles()
 In controller:
 
 ```php
-$this->get('nodiacritic')->filter('Révolution française');
+$noDiacriticString = NoDiacritic::filter("Révolution française");
 ```
 
-In template:
+In Twig template:
 
 ```twig
 {{ "Révolution française"|nodiacritic }}
 ```
+
+As expected, the result is `Revolution francaise`.
+
+As you can see [nodiacritic library](https://github.com/vria/nodiacritic) is aware of German and Danish
+particularities, and so is this integration. The bunble reads current locale from `Request` and pass it to `filter` function.
+In case the desired locale is different you can pass it as a parameter:
+
+```twig
+Ceci est une phrase allemande sans caractères spéciaux: {{ "Schöne straße"|nodiacritic("de") }}
+```
+
+will print `Ceci est une phrase allemande sans caractères spéciaux: Schoene strasse`.
+
+You can find the article about the library in [my blog](https://vria.eu/news/2016/4/24/library-and-symfony-bundle-to-remove-diacritic-signs-form-strings).
